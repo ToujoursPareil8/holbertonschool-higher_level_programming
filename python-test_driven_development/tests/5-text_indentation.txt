@@ -1,0 +1,100 @@
+=================================
+The ``5-text_indentation`` module
+=================================
+
+Using ``text_indentation``, print a text.
+
+Basics
+======
+
+``text_indentation``, prints a text with 2 new lines after each of these characters: ``.``, ``?`` and ``:``
+
+::
+
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>> text_indentation("Hello. World? And: Holberton.")
+	Hello.
+	<BLANKLINE>
+	World?
+	<BLANKLINE>
+	And:
+	<BLANKLINE>
+	Holberton.
+	<BLANKLINE>
+
+Prints with spaces.
+
+::
+
+	>>> text_indentation("    Holberton    ")
+	Holberton
+
+Prints with a special character at the end.
+
+::
+
+	>>> text_indentation("    Hello    .")
+	Hello.
+	<BLANKLINE>
+
+
+Prints all special characters.
+
+::
+
+	>>> text_indentation(".?:")
+	.
+    	<BLANKLINE>
+    	?
+    	<BLANKLINE>
+    	:
+    	<BLANKLINE>
+
+Others tests with special characters.
+
+::
+
+	>>> text_indentation("   \n")
+    	<BLANKLINE>
+
+	>>> text_indentation("   \n   ")
+   	<BLANKLINE>
+
+	>>> text_indentation("\n   ")
+  	<BLANKLINE>
+
+	>>> text_indentation('\n.\n?\n:')
+    	<BLANKLINE>
+    	.
+    	<BLANKLINE>
+    	<BLANKLINE>
+    	?
+    	<BLANKLINE>
+    	<BLANKLINE>
+    	:
+    	<BLANKLINE>
+
+
+Errors
+======
+
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+		...
+	TypeError: text must be a string
+
+
+	>>> text_indentation(None)
+        Traceback (most recent call last):
+                ...
+        TypeError: text must be a string
+
+```text`` must be defined in argument.
+
+::
+
+	>>> text_indentation()
+        Traceback (most recent call last):
+                ...
+        TypeError: text_indentation() missing 1 required positional argument: 'text'
