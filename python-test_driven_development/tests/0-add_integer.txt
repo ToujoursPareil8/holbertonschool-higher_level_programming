@@ -1,0 +1,70 @@
+=============================
+The ``0-add_integer`` module
+=============================
+
+Using ``add_integer``, for addition numbers.
+
+
+Numbers
+=======
+
+``add_integer()`` returns the addition of its arguments. For numbers, that value is equivalent to using the ```+`` operator.
+
+::
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+	>>> add_integer(1, 2)
+	3
+
+It also works works with floating-point values, cast to integer.
+
+::
+
+	>>> add_integer(2)
+	100
+
+With number negative, work too.
+
+::
+
+	>>> add_integer(100.3, -2)
+	98
+
+Non-Numbers
+===========
+
+``add_integer()`` don't accept non-numbers values. A error is raised.
+
+::
+
+	>>> add_integer("a", 2)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+	>>> add_integer(1, "b")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Float-Errors
+============
+
+Errors of floating-values. A error is raised.
+
+::
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+		...
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+		...
+	ValueError: cannot convert float NaN to integer
