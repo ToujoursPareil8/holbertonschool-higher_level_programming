@@ -1,6 +1,12 @@
 #!/usr/bin/python3
+"""
+This is class Square that defines a square by size.
+"""
+
+
 class Square:
-    """defines a square"""
+    """
+    A class that defines a square by its size.
+    """
     def __init__(self, size):
-        """initializes the square with a size"""
-        self.size = size
+        self.__size = size
